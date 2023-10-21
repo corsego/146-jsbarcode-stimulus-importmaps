@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Product.destroy_all
+50.times do
+  Product.create!(
+    name: Faker::Commerce.product_name,
+  )
+end
